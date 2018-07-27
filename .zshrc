@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Ace/.oh-my-zsh
+HOME="/Users/$USER"
+export ZSH=$HOME/.oh-my-zsh
 DEFAULT_USER="$USER"
 
 # Set name of the theme to load.
@@ -56,20 +57,19 @@ plugins=(git node z npm osx brew go docker)
 
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
-export GOPATH="/Users/Ace/Documents/go"
-# export GOPATH="/Users/Ace/Documents/goTemp"
+export GOPATH="$HOME/Documents/go"
 
-FABRIC_BIN=/Users/Ace/Documents/Workspace/fabric/bin
-PROTOC_BIN="~/protoc-3.6.0-osx-x86_64/bin"
+FABRIC_BIN=$HOME/Documents/Workspace/fabric/bin
+PROTOC_BIN="$HOME/protoc-3.6.0-osx-x86_64/bin"
 export PATH=$GOPATH/bin:$FABRIC_BIN:$PATH:$PROTOC_BIN
 
 start_proxy() {
-  export http_proxy=http://127.0.0.1:1087
-  export https_proxy=http://127.0.0.1:1087
+	export http_proxy=http://127.0.0.1:1087
+	export https_proxy=http://127.0.0.1:1087
 }
 stop_proxy() {
-  unset http_proxy
-  unset https_proxy
+	unset http_proxy
+	unset https_proxy
 }
 
 source $ZSH/oh-my-zsh.sh
@@ -107,5 +107,5 @@ alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs --insecure"
 alias docker_rm_all_c='docker container rm $(docker container ls -a -q)'
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
