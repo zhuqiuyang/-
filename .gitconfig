@@ -1,0 +1,13 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	required = true
+[user]
+	name = zhuqiuyang
+	email = zqyhit@qq.com
+[color]
+	ui = true
+[format]
+	pretty = oneline
+[credential]
+	helper = osxkeychain
