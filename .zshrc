@@ -58,10 +58,11 @@ plugins=(git node z npm osx brew go docker)
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 export GOPATH="$HOME/Documents/go"
+DOWNLOAD_BIN="$HOME/Downloads/bin"
 
 FABRIC_BIN=$HOME/Documents/Workspace/fabric/bin
 PROTOC_BIN="$HOME/protoc-3.6.0-osx-x86_64/bin"
-export PATH=$GOPATH/bin:$FABRIC_BIN:$PATH:$PROTOC_BIN
+export PATH=$GOPATH/bin:$FABRIC_BIN:$PATH:$PROTOC_BIN:$DOWNLOAD_BIN
 
 start_proxy() {
 	export http_proxy=http://127.0.0.1:1087
